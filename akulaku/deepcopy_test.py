@@ -5,7 +5,7 @@ import time
 import pickle
 
 
-array = [1 for i in range(1000)]
+array = [[1,2,3] for i in range(1000)]
 
 # deepcopy
 st1  = time.time()
@@ -19,7 +19,7 @@ print(f"new: {time.time() - st2:.10f}")
 
 # copy
 st3  = time.time()
-new_array = array.copy()
+new_array = copy.copy(array)
 print(f"array.copy: {time.time() - st3:.10f}")
 
 # copy
